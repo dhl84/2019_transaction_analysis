@@ -1,0 +1,97 @@
+Hi there!
+
+Here is the information you've asked for. I wasn't sure what format to give you this information in, since there's a lot of information. 
+
+I've asked our data engineer and he's provided some explanatory info below. Now I need to go! Let's catch up on Monday if you have any questions!
+
+Best,
+
+Rita
+Data Analyst
+
+********** DATA EXPLANATION ***************
+
+1. countries.csv
+	- a table with all alpha-numeric representations of countries. You may need to use this to standardise country codes to one format
+2. fx_rates.csv
+	- a table with fx rates on a particular day
+3. fraudsters.csv
+	- this is list of IDs of users who have been identified as fraudsters but there's a bunch we haven't found yet!
+4. train_transactions.csv
+	- all transactions conducted by users
+	- **amount** is denominated in integers at the lowest unit. e.g. 5000 GBP => 50 GBP (because the lowest unit in GBP is a penny, w/ 100 pence = 1 GBP)
+	- **entry_method** is only relevant for card transactions (CARD_PAYMENT, ATM); you may ignore it for other transactions. The values are:
+		misc - unknown
+		chip - chip on card
+		mags - magstripe on card
+		manu - manual entry of card details
+		cont - contactless/tap 
+		mcon - special case of magstripe & contactless
+	- **source** is associated with an external party we use for handling this type of transaction. (e.g. all {CARD_PAYMENT, ATM} use GAIA)
+5. train_users.csv
+	- a table of user data
+	- **kyc** column indicates the status of the user's identity verification process
+	- **terms_version** column indicates the user's current version of the Revolut app
+6. currency_details.csv
+	- a table with iso codes and exponents for currencies
+	- **exponent** column can be used to convert the integer amounts in the transactions table into cash amounts. (e.g for 5000 GBP, exponent = 2, so we apply: 5000/(10^2) = 50 GBP)
+
+********** END OF DATA EXPLANATION ***************
+
+
+********** PUTTING THE DATA INTO A DATABASE ***************
+
+If you do decide to pop this info into a database, I'd advise to either:
+- using a simple tool SQLite or
+- writing an ETL script in Python to load and store the data in a local PostgreSQL database. An example schema is below; to make it really easy, use SQLAlchemy (an ORM).
+
+
+transactions
+--------------
+currency: character(3), not null,
+amount: bigint, not null,
+state: varchar(25), not null,
+created_date: timestamp without time zone, not null
+merchant_category: varchar(100),
+merchant_country: varchar(3),
+entry_method: varchar(4),  not null
+user_id: uuid, not null
+type: varchar(20), not null
+source: varchar(20), not null
+id: uuid, primary key
+--------------
+
+users
+--------------
+id: uuid, primary key
+has_email: boolean, not null
+phone_country: varchar(300)
+terms_version: date,
+created_date: timestamp without time zone, not null
+state: varchar(25), not null,
+country: varchar(2)
+birth_year: integer,
+kyc: varchar(20),
+failed_sign_in_attempts: integer
+--------------
+
+fx_rates
+--------------
+base_ccy: varchar(3),
+ccy: varchar(10),
+rate: double precision
+--------------
+
+currency_details
+--------------
+ccy: varchar(10), primary key
+iso_code: integer,
+exponent: integer,
+is_crypto: boolean, not null
+--------------
+
+
+
+
+
+
