@@ -31,7 +31,6 @@ facial_similarity_reports
 
 - check why score is sometimes blank (properties = {})
 
-
 - order by created_at date
  - test theory that pass rate has decreased substantially
 
@@ -49,7 +48,7 @@ if sub_result != 'clear', result = 'consider'
 
 
 test 2 attempts claim: each candidate has up to 2 attempts
-
+264 user_ids have had more than 2 attempts
 
 Solutions
 
@@ -73,9 +72,23 @@ if 3 tests (of 3) passed then always "clear"
 if face_comparison_result is "clear" then result = "clear"
 facial_image_integrity_result can be clear/consult and still pass
 
+Doc:
+data_validation
+Asserts whether algorithmically-validatable elements are correct e.g. MRZ lines and document numbers
 
+police_record
+Asserts whether the document has been identified as lost, stolen or otherwise compromised
 
+visual_authenticity
+Asserts whether visual, non-textual, elements are correct given the type of document
+	face_detection
 
+image_integrity
+Asserts whether the document was of sufficient quality to verify
+	image_quality
+	supported_document
+	conclusive_document_quality
+	colour_picture
 
 2. Fraud
 
