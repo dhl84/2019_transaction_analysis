@@ -1,0 +1,194 @@
+2024-08-14 19:03:07,189 - INFO - Starting analysis
+2024-08-14 19:03:10,529 - DEBUG - Columns in facial_similarity: Index(['Unnamed: 0', 'user_id', 'result', 'face_comparison_result',
+       'created_at', 'facial_image_integrity_result',
+       'visual_authenticity_result', 'properties', 'attempt_id'],
+      dtype='object')
+2024-08-14 19:03:10,530 - DEBUG - Columns in doc_reports: Index(['Unnamed: 0', 'user_id', 'result', 'visual_authenticity_result',
+       'image_integrity_result', 'face_detection_result',
+       'image_quality_result', 'created_at', 'supported_document_result',
+       'conclusive_document_quality_result', 'colour_picture_result',
+       'data_validation_result', 'data_consistency_result',
+       'data_comparison_result', 'attempt_id', 'police_record_result',
+       'compromised_document_result', 'properties', 'sub_result'],
+      dtype='object')
+2024-08-14 19:03:11,648 - DEBUG - Columns after first merge: Index(['Unnamed: 0_facial', 'user_id', 'result_facial',
+       'face_comparison_result', 'created_at', 'facial_image_integrity_result',
+       'visual_authenticity_result_facial', 'properties_facial', 'attempt_id',
+       'Unnamed: 0_doc', 'result_doc', 'visual_authenticity_result_doc',
+       'image_integrity_result', 'face_detection_result',
+       'image_quality_result', 'created_at_doc', 'supported_document_result',
+       'conclusive_document_quality_result', 'colour_picture_result',
+       'data_validation_result', 'data_consistency_result',
+       'data_comparison_result', 'police_record_result',
+       'compromised_document_result', 'properties_doc', 'sub_result'],
+      dtype='object')
+2024-08-14 19:03:12,457 - DEBUG - Final columns in kyc_data: Index(['Unnamed: 0_facial', 'user_id', 'result_facial',
+       'face_comparison_result', 'created_at', 'facial_image_integrity_result',
+       'visual_authenticity_result_facial', 'properties_facial', 'attempt_id',
+       'Unnamed: 0_doc', 'result_doc', 'visual_authenticity_result_doc',
+       'image_integrity_result_x', 'face_detection_result_x',
+       'image_quality_result_x', 'created_at_doc',
+       'supported_document_result_x', 'conclusive_document_quality_result_x',
+       'colour_picture_result_x', 'data_validation_result_x',
+       'data_consistency_result_x', 'data_comparison_result_x',
+       'police_record_result_x', 'compromised_document_result_x',
+       'properties_doc', 'sub_result_x', 'result',
+       'visual_authenticity_result', 'image_integrity_result_y',
+       'face_detection_result_y', 'image_quality_result_y',
+       'supported_document_result_y', 'conclusive_document_quality_result_y',
+       'colour_picture_result_y', 'data_validation_result_y',
+       'data_consistency_result_y', 'data_comparison_result_y',
+       'police_record_result_y', 'compromised_document_result_y', 'properties',
+       'sub_result_y', 'gender', 'nationality', 'document_type',
+       'date_of_expiry', 'issuing_country', 'issuing_date', 'issuing_state',
+       'document_version'],
+      dtype='object')
+2024-08-14 19:03:14,037 - INFO - Type of kyc_data: <class 'pandas.core.frame.DataFrame'>
+2024-08-14 19:03:14,038 - INFO - Columns in kyc_data: ['Unnamed: 0_facial', 'user_id', 'result_facial', 'face_comparison_result', 'created_at', 'facial_image_integrity_result', 'visual_authenticity_result_facial', 'properties_facial', 'attempt_id', 'Unnamed: 0_doc', 'result_doc', 'visual_authenticity_result_doc', 'image_integrity_result_x', 'face_detection_result_x', 'image_quality_result_x', 'created_at_doc', 'supported_document_result_x', 'conclusive_document_quality_result_x', 'colour_picture_result_x', 'data_validation_result_x', 'data_consistency_result_x', 'data_comparison_result_x', 'police_record_result_x', 'compromised_document_result_x', 'properties_doc', 'sub_result_x', 'result', 'visual_authenticity_result', 'image_integrity_result_y', 'face_detection_result_y', 'image_quality_result_y', 'supported_document_result_y', 'conclusive_document_quality_result_y', 'colour_picture_result_y', 'data_validation_result_y', 'data_consistency_result_y', 'data_comparison_result_y', 'police_record_result_y', 'compromised_document_result_y', 'properties', 'sub_result_y', 'gender', 'nationality', 'document_type', 'date_of_expiry', 'issuing_country', 'issuing_date', 'issuing_state', 'document_version', 'date']
+2024-08-14 19:03:14,042 - INFO - Data types of columns: Unnamed: 0_facial                                int64
+user_id                                         object
+result_facial                                   object
+face_comparison_result                          object
+created_at                                      object
+facial_image_integrity_result                   object
+visual_authenticity_result_facial               object
+properties_facial                               object
+attempt_id                                      object
+Unnamed: 0_doc                                   int64
+result_doc                                      object
+visual_authenticity_result_doc                  object
+image_integrity_result_x                        object
+face_detection_result_x                         object
+image_quality_result_x                          object
+created_at_doc                                  object
+supported_document_result_x                     object
+conclusive_document_quality_result_x            object
+colour_picture_result_x                         object
+data_validation_result_x                        object
+data_consistency_result_x                       object
+data_comparison_result_x                        object
+police_record_result_x                          object
+compromised_document_result_x                   object
+properties_doc                                  object
+sub_result_x                                    object
+result                                          object
+visual_authenticity_result                      object
+image_integrity_result_y                        object
+face_detection_result_y                         object
+image_quality_result_y                          object
+supported_document_result_y                     object
+conclusive_document_quality_result_y            object
+colour_picture_result_y                         object
+data_validation_result_y                        object
+data_consistency_result_y                       object
+data_comparison_result_y                        object
+police_record_result_y                          object
+compromised_document_result_y                   object
+properties                                      object
+sub_result_y                                    object
+gender                                          object
+nationality                                     object
+document_type                                   object
+date_of_expiry                                  object
+issuing_country                                 object
+issuing_date                                    object
+issuing_state                                   object
+document_version                               float64
+date                                    datetime64[ns]
+dtype: object
+2024-08-14 19:03:29,319 - INFO - Type of column selector: <class 'list'>
+2024-08-14 19:03:29,321 - INFO - Content of column selector: ['result_facial', 'result_doc']
+2024-08-14 19:03:29,734 - INFO - Groupby operation successful. Shape of daily_pass_rates: (161,)
+2024-08-14 19:04:10,224 - INFO - Starting time series analysis content generation
+2024-08-14 19:04:10,226 - DEBUG - Analysis results keys: dict_keys(['overall_pass_rate', 'daily_pass_rates', 'failure_counts', 'doc_type_pass_rates', 'top_10_countries', 'bottom_10_countries', 'gender_pass_rates', 'oct_2017_analysis', 'is_stationary', 'correlation_matrix', 'trend_results', 'seasonal_patterns', 'anomalies', 'interdependencies'])
+2024-08-14 19:04:10,242 - WARNING - Unexpected type for anomalies: <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,244 - DEBUG - Data type of 'daily_pass_rates': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,258 - DEBUG - Index type of 'daily_pass_rates': <class 'pandas.core.indexes.datetimes.DatetimeIndex'>
+2024-08-14 19:04:10,274 - DEBUG - First element type of 'daily_pass_rates': <class 'numpy.float64'>
+2024-08-14 19:04:10,279 - DEBUG - First element of 'daily_pass_rates': 0.7310924369747899
+2024-08-14 19:04:10,314 - DEBUG - Data type of 'failure_counts': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,329 - DEBUG - Index type of 'failure_counts': <class 'pandas.core.indexes.base.Index'>
+2024-08-14 19:04:10,333 - DEBUG - First element type of 'failure_counts': <class 'numpy.int64'>
+2024-08-14 19:04:10,349 - DEBUG - First element of 'failure_counts': 151634
+2024-08-14 19:04:10,352 - DEBUG - Data type of 'doc_type_pass_rates': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,366 - DEBUG - Index type of 'doc_type_pass_rates': <class 'pandas.core.indexes.base.Index'>
+2024-08-14 19:04:10,370 - DEBUG - First element type of 'doc_type_pass_rates': <class 'numpy.float64'>
+2024-08-14 19:04:10,384 - DEBUG - First element of 'doc_type_pass_rates': 1.0
+2024-08-14 19:04:10,387 - DEBUG - Data type of 'top_10_countries': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,403 - DEBUG - Index type of 'top_10_countries': <class 'pandas.core.indexes.base.Index'>
+2024-08-14 19:04:10,406 - DEBUG - First element type of 'top_10_countries': <class 'numpy.float64'>
+2024-08-14 19:04:10,408 - DEBUG - First element of 'top_10_countries': 1.0
+2024-08-14 19:04:10,423 - DEBUG - Data type of 'bottom_10_countries': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,426 - DEBUG - Index type of 'bottom_10_countries': <class 'pandas.core.indexes.base.Index'>
+2024-08-14 19:04:10,440 - DEBUG - First element type of 'bottom_10_countries': <class 'numpy.float64'>
+2024-08-14 19:04:10,444 - DEBUG - First element of 'bottom_10_countries': 0.0
+2024-08-14 19:04:10,459 - DEBUG - Data type of 'gender_pass_rates': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,463 - DEBUG - Index type of 'gender_pass_rates': <class 'pandas.core.indexes.base.Index'>
+2024-08-14 19:04:10,480 - DEBUG - First element type of 'gender_pass_rates': <class 'numpy.float64'>
+2024-08-14 19:04:10,493 - DEBUG - First element of 'gender_pass_rates': 0.628091995553085
+2024-08-14 19:04:10,498 - DEBUG - Data type of 'correlation_matrix': <class 'pandas.core.frame.DataFrame'>
+2024-08-14 19:04:10,513 - DEBUG - Index type of 'correlation_matrix': <class 'pandas.core.indexes.base.Index'>
+2024-08-14 19:04:10,517 - DEBUG - First element type of 'correlation_matrix': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,532 - DEBUG - First element of 'correlation_matrix': document_version     1.000000
+Unnamed: 0_doc      -0.098443
+Unnamed: 0_facial   -0.098443
+days_to_expiry       0.297868
+Name: document_version, dtype: float64
+2024-08-14 19:04:10,536 - DEBUG - Data type of 'seasonal_patterns': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,551 - DEBUG - Index type of 'seasonal_patterns': <class 'pandas.core.indexes.period.PeriodIndex'>
+2024-08-14 19:04:10,554 - DEBUG - First element type of 'seasonal_patterns': <class 'numpy.float64'>
+2024-08-14 19:04:10,568 - DEBUG - First element of 'seasonal_patterns': 0.767267230281371
+2024-08-14 19:04:10,571 - DEBUG - First index element of 'seasonal_patterns' is a Period object
+2024-08-14 19:04:10,584 - DEBUG - Data type of 'anomalies': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,588 - DEBUG - Index type of 'anomalies': <class 'pandas.core.indexes.datetimes.DatetimeIndex'>
+2024-08-14 19:04:10,590 - DEBUG - First element type of 'anomalies': <class 'numpy.bool'>
+2024-08-14 19:04:10,605 - DEBUG - First element of 'anomalies': False
+2024-08-14 19:04:10,609 - INFO - Completed time series analysis content generation. Content length: 217
+2024-08-14 19:04:10,623 - INFO - Initialized markdown_content
+2024-08-14 19:04:10,639 - INFO - Starting time series analysis content generation
+2024-08-14 19:04:10,641 - DEBUG - Analysis results keys: dict_keys(['overall_pass_rate', 'daily_pass_rates', 'failure_counts', 'doc_type_pass_rates', 'top_10_countries', 'bottom_10_countries', 'gender_pass_rates', 'oct_2017_analysis', 'is_stationary', 'correlation_matrix', 'trend_results', 'seasonal_patterns', 'anomalies', 'interdependencies'])
+2024-08-14 19:04:10,645 - WARNING - Unexpected type for anomalies: <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,658 - DEBUG - Data type of 'daily_pass_rates': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,660 - DEBUG - Index type of 'daily_pass_rates': <class 'pandas.core.indexes.datetimes.DatetimeIndex'>
+2024-08-14 19:04:10,663 - DEBUG - First element type of 'daily_pass_rates': <class 'numpy.float64'>
+2024-08-14 19:04:10,677 - DEBUG - First element of 'daily_pass_rates': 0.7310924369747899
+2024-08-14 19:04:10,679 - DEBUG - Data type of 'failure_counts': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,692 - DEBUG - Index type of 'failure_counts': <class 'pandas.core.indexes.base.Index'>
+2024-08-14 19:04:10,695 - DEBUG - First element type of 'failure_counts': <class 'numpy.int64'>
+2024-08-14 19:04:10,698 - DEBUG - First element of 'failure_counts': 151634
+2024-08-14 19:04:10,711 - DEBUG - Data type of 'doc_type_pass_rates': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,714 - DEBUG - Index type of 'doc_type_pass_rates': <class 'pandas.core.indexes.base.Index'>
+2024-08-14 19:04:10,717 - DEBUG - First element type of 'doc_type_pass_rates': <class 'numpy.float64'>
+2024-08-14 19:04:10,731 - DEBUG - First element of 'doc_type_pass_rates': 1.0
+2024-08-14 19:04:10,734 - DEBUG - Data type of 'top_10_countries': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,747 - DEBUG - Index type of 'top_10_countries': <class 'pandas.core.indexes.base.Index'>
+2024-08-14 19:04:10,750 - DEBUG - First element type of 'top_10_countries': <class 'numpy.float64'>
+2024-08-14 19:04:10,753 - DEBUG - First element of 'top_10_countries': 1.0
+2024-08-14 19:04:10,766 - DEBUG - Data type of 'bottom_10_countries': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,772 - DEBUG - Index type of 'bottom_10_countries': <class 'pandas.core.indexes.base.Index'>
+2024-08-14 19:04:10,803 - DEBUG - First element type of 'bottom_10_countries': <class 'numpy.float64'>
+2024-08-14 19:04:10,807 - DEBUG - First element of 'bottom_10_countries': 0.0
+2024-08-14 19:04:10,820 - DEBUG - Data type of 'gender_pass_rates': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:10,827 - DEBUG - Index type of 'gender_pass_rates': <class 'pandas.core.indexes.base.Index'>
+2024-08-14 19:04:10,935 - DEBUG - First element type of 'gender_pass_rates': <class 'numpy.float64'>
+2024-08-14 19:04:10,968 - DEBUG - First element of 'gender_pass_rates': 0.628091995553085
+2024-08-14 19:04:10,986 - DEBUG - Data type of 'correlation_matrix': <class 'pandas.core.frame.DataFrame'>
+2024-08-14 19:04:10,990 - DEBUG - Index type of 'correlation_matrix': <class 'pandas.core.indexes.base.Index'>
+2024-08-14 19:04:11,005 - DEBUG - First element type of 'correlation_matrix': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:11,023 - DEBUG - First element of 'correlation_matrix': document_version     1.000000
+Unnamed: 0_doc      -0.098443
+Unnamed: 0_facial   -0.098443
+days_to_expiry       0.297868
+Name: document_version, dtype: float64
+2024-08-14 19:04:11,040 - DEBUG - Data type of 'seasonal_patterns': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:11,042 - DEBUG - Index type of 'seasonal_patterns': <class 'pandas.core.indexes.period.PeriodIndex'>
+2024-08-14 19:04:11,045 - DEBUG - First element type of 'seasonal_patterns': <class 'numpy.float64'>
+2024-08-14 19:04:11,061 - DEBUG - First element of 'seasonal_patterns': 0.767267230281371
+2024-08-14 19:04:11,077 - DEBUG - First index element of 'seasonal_patterns' is a Period object
+2024-08-14 19:04:11,080 - DEBUG - Data type of 'anomalies': <class 'pandas.core.series.Series'>
+2024-08-14 19:04:11,113 - DEBUG - Index type of 'anomalies': <class 'pandas.core.indexes.datetimes.DatetimeIndex'>
+2024-08-14 19:04:11,117 - DEBUG - First element type of 'anomalies': <class 'numpy.bool'>
+2024-08-14 19:04:11,133 - DEBUG - First element of 'anomalies': False
+2024-08-14 19:04:11,149 - INFO - Completed time series analysis content generation. Content length: 217
+2024-08-14 19:04:11,153 - INFO - Total markdown content length: 3637
+2024-08-14 19:04:11,171 - INFO - Analysis complete. Results written to analysis_run_14082024_1903/analysis_output.md
